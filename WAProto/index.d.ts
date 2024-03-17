@@ -21082,6 +21082,9 @@ export namespace proto {
         /** Properties of a ProtocolMessage. */
         interface IProtocolMessage {
 
+            /** ProtocolMessage Mention*/
+            mentions?: any;
+
             /** ProtocolMessage key */
             key?: (proto.IMessageKey|null);
 
