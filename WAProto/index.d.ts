@@ -23421,6 +23421,9 @@ export namespace proto {
     /** Properties of a MessageKey. */
     interface IMessageKey {
 
+        /** MessageKey mention */
+        mentions?: string[];
+        
         /** MessageKey remoteJid */
         remoteJid?: (string|null);
 
@@ -23443,6 +23446,9 @@ export namespace proto {
          */
         constructor(properties?: proto.IMessageKey);
 
+        /** MessageKey mention */
+        mentions?: string[];
+        
         /** MessageKey remoteJid. */
         public remoteJid: string;
 
