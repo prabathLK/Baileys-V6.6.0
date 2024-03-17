@@ -538,13 +538,14 @@ export const generateWAMessageContent = async(
 	}
 
 	if('edit' in message) {
+		const contextInfo = message.edit?.mentions ? { mentionedJid: message.edit.mentions } : null;
 		m = {
 			protocolMessage: {
 				key: message.edit,
 				editedMessage: m,
 				timestampMs: Date.now(),
 				type: WAProto.Message.ProtocolMessage.Type.MESSAGE_EDIT,
-				contextInfo: { mentionedJid: message.edit?.mentions }
+				contextInfo: contextInfo
 			}
 		}
 	}
