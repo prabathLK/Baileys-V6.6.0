@@ -72,6 +72,7 @@ type Templatable = {
 }
 type Editable = {
   edit?: WAMessageKey
+  mentions: string[]
 }
 type Listable = {
     /** Sections of the List */
