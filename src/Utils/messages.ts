@@ -448,6 +448,7 @@ export const generateWAMessageContent = async(
 			name: message.poll.name,
 			selectableOptionsCount: message.poll.selectableCount,
 			options: message.poll.values.map(optionName => ({ optionName })),
+			contextInfo: { mentionedJid: message.poll?.mentions }
 		}
 	} else if('sharePhoneNumber' in message) {
 		m.protocolMessage = {
@@ -542,7 +543,8 @@ export const generateWAMessageContent = async(
 				key: message.edit,
 				editedMessage: m,
 				timestampMs: Date.now(),
-				type: WAProto.Message.ProtocolMessage.Type.MESSAGE_EDIT
+				type: WAProto.Message.ProtocolMessage.Type.MESSAGE_EDIT,
+				contextInfo: { mentionedJid: message.edit?.mentions }
 			}
 		}
 	}
