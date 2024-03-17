@@ -21082,7 +21082,7 @@ export namespace proto {
         /** Properties of a ProtocolMessage. */
         interface IProtocolMessage {
 
-            /** ProtocolMessage Mention*/
+            /** ProtocolMessage mention*/
             mentions?: any;
 
             /** ProtocolMessage key */
