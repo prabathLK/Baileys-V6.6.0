@@ -544,7 +544,7 @@ export const generateWAMessageContent = async(
 				editedMessage: m,
 				timestampMs: Date.now(),
 				type: WAProto.Message.ProtocolMessage.Type.MESSAGE_EDIT,
-				mentions: message.edit?.mentions
+				mentions: message.edit?.mentions // [Added mention of edited messages]
 			}
 		}
 	}
